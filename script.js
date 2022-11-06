@@ -1,7 +1,7 @@
 // Declared variables
 var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
-var timeout= document.querySelector("#timeout");
+var goBack= document.querySelector("#goback");
 
 // Event listener to clear scores 
 clear.addEventListener("click", function () {
