@@ -181,7 +181,7 @@ function allDone() {
         } else {
             var finalScore = {
                 initials: initials,
-                score: timeRemaining
+                score: timeRemaining,
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
