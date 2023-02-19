@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <nav class="navbar navbar-light bg-light">
+<p class="text-navpattern">Mind Challenge  </p>    </nav>
 <head>
     <meta charset="UTF-8">
     <!-- This is the first step in making the document responsive but scaling the items to screen -->
@@ -16,28 +17,35 @@
 
 <body>
     <!-- Link to highscores -->
-    <a href="HighScore.html">View Highscores</a>
+    <a class="button1" href="HighScore.html">View Highscores</a>
     <!-- This is a wrapper -->
     <div id="wrapper">
         <!-- Div for timer -->
         <div id="currentTime"></div>
         <!-- Div for quiz content -->
         <div id="questionsDiv">
-            <h1>Coding Quiz Challenge</h1>
+            <h1 style="text-align: center;">Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
                 answers
                 will penalize your score/time by ten seconds!</p>
             <ul id="choicesUl"></ul>
             <!-- Buttons -->
-            <button id="startTime">Start Quiz</button>
+            <button class="buttonquiz" id="startTime">Start Quiz</button>
         </div>
 
     </div>
 
 
-    <script src="HighScore.js"></script>
+    <script src="HighScore.js" ></script>
+    <!-- <label>
+        <input
+                     type="radio"
+                     bind:group={selected}
+                     name="questions"
+                     value={questions}
+                     > {questions.choices}
+    </label> -->
 
 
 </body>
-
 </html>

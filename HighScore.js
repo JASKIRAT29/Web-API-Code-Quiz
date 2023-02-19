@@ -27,6 +27,8 @@ var questions = [
     },
 
 ];
+// let selected = '';
+// let  choices = selected.choices
 // Declared variables
 var score = 0;
 var questionIndex = 0;
@@ -76,6 +78,19 @@ function render(questionIndex) {
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
         questionsDiv.textContent = userQuestion;
+        var name = "radio"+i; 
+        for ( var opt in options ) {
+        
+          var radioEle = document.createElement("input");
+          radioEle.type = "radio";          
+          radioEle.value = options[opt];
+          radioEle.name = name;
+          document.body.appendChild(radioEle);
+          var label = document.createElement("Label");
+          label.innerHTML = options[opt];
+          document.body.appendChild(label);
+          document.body.appendChild(document.createElement("br"));
+        }
     }
     // New for each for question choices
     userChoices.forEach(function (newItem) {
