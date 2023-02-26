@@ -1,54 +1,30 @@
 # Web-API-Code-Quiz
-This project was designed as a homework assignment for WEB-API bootcamp.
+We had build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
 
-This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and 
-collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
-Installing
-To install this code, download the zip file, or use GitHub's guidelines to clone the repository.
+### User Story
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
+### Acceptance Criteria
+```
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and score
+```
 
-Summary
-HTML and CSS and Javascript documents create a quiz with multiple choice questions with Javascript trivia
-This project emphasizes the use of using Javascript to make dynamic changes to an HMTL document
-This project utilizes the use of appending HTML pages
-This project has the following features:
-A Start Quiz button
-This starts a timer for the user
-Each question averages 15 seconds each for a total time of 75 seconds + 1.
-
-
-An appended HTML page that features questions, and multiple choice answers
-If questions are answered incorrectly, 5 seconds are deducted off remaining time
-Answers are recording using an event listener, "click" and tracks correct answers
-
-
-
-
-An appended HTML page that features:
-Final score which is calculated using time remaining
-A Summary of how many questions answered correctly
-Input area to record initials
-A Submit button
-Submit buttom saves initials and score to local storage
-
-
-A Highscores HTML
-This a list summary of intials and final scores
-Clear button resets the page and local storage
-Go back button travels to the start of the quiz
-
-
-Psuedo code:
-Create a timer attached to a button with a starting value of 0
-When timer is pressed start a reverse countdown
-Create a 0 for countdown
-When countdown starts, start quiz
-Start Quiz will be on appended page
-Append the question: choices
-When user selects the right answer, textcontent "Correct!"
-When user selects the right answer, textcontent "Wrong!"
-Final score will keep track of how many the user got right
-Left over time will be deducted from final score
-Final Score Appended page
-Captures local storage
-Travels to another HTML
-Retrieved highscores
+## Demo
+![Untitled_ Feb 20, 2023 1_10 PM](https://user-images.githubusercontent.com/114631240/220176365-e672f32b-901c-43eb-bd39-669990e92f63.gif)
+<img width="919" alt="webapi1" src="https://user-images.githubusercontent.com/114631240/220176997-c3f51593-5337-41cf-9ed6-e97abffa43e0.png">
+<img width="911" alt="webapi2" src="https://user-images.githubusercontent.com/114631240/220177032-ac52b50d-bf0d-485f-b159-28206a1eaac7.png">
+## License
+#### No
