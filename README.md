@@ -22,9 +22,10 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 
-## Demo
-![Untitled_ Feb 20, 2023 1_10 PM](https://user-images.githubusercontent.com/114631240/220176365-e672f32b-901c-43eb-bd39-669990e92f63.gif)
-<img width="919" alt="webapi1" src="https://user-images.githubusercontent.com/114631240/220176997-c3f51593-5337-41cf-9ed6-e97abffa43e0.png">
-<img width="911" alt="webapi2" src="https://user-images.githubusercontent.com/114631240/220177032-ac52b50d-bf0d-485f-b159-28206a1eaac7.png">
+## Screenshots
+![webapi1](https://user-images.githubusercontent.com/114631240/221445992-89ca331c-7ee9-41c4-9db6-7bd63534eb8e.png)
+![webapi2](https://user-images.githubusercontent.com/114631240/221446001-9d68be23-ceaa-40c3-b7dc-9b0b7a12691f.png)
+
+
 ## License
 #### No
