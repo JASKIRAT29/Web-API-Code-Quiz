@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div>
+<div>
     <nav class="navbar navbar-light bg-light">
-<img src="assets/images/png-clipart-logo-mind-graphy-illustration-creative-human-brain-photography-people.png"><p class="text-navpattern">Mind Challenge  </p>   </nav>
+        <img src="assets/images/png-clipart-logo-mind-graphy-illustration-creative-human-brain-photography-people.png">
+        <p class="text-navpattern">Mind Challenge </p>
+    </nav>
 </div>
+
 <head>
     <meta charset="UTF-8">
     <!-- This is the first step in making the document responsive but scaling the items to screen -->
@@ -19,35 +22,29 @@
 
 <body>
     <!-- Link to highscores -->
-    <a class="button1" href="HighScore.html">View Highscores</a>
+    <a class="button1" href="scorePage.html">View Highscores</a>
     <!-- This is a wrapper -->
     <div id="wrapper">
         <!-- Div for timer -->
-        <div id="currentTime"></div>
-        <!-- Div for quiz content -->
-        <div id="questionsDiv" >
+        <div id="timer"></div>
+        <div id="intialPage">
             <h1 style="text-align: center;">Coding Quiz Challenge</h1>
-            <p style="text-align: justify;">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+            <p style="text-align: justify;">Try to answer the following code-related questions within the time limit.
+                Keep in mind that incorrect
                 answers
                 will penalize your score/time by ten seconds!</p>
-            <ul id="choicesUl"></ul>
-            <!-- Buttons -->
-            <button class="buttonquiz" id="startTime">Start Quiz</button>
+                <!-- Buttons -->
+                <button class="buttonquiz" id="startTime">Start Quiz</button>
+        </div>
+        <!-- Div for quiz content -->
+        <div id="newQuestionSpace">
+            <ul id="choices"></ul>
         </div>
 
     </div>
 
 
-    <script type="module" src="HighScore.js" ></script>
-    <!-- <label>
-        <input
-                     type="radio"
-                     bind:group={selected}
-                     name="questions"
-                     value={questions}
-                     > {questions.choices}
-    </label> -->
-
-
+    <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>
