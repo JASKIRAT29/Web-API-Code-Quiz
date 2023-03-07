@@ -2,8 +2,8 @@
 <html lang="en">
 <div>
     <nav class="navbar navbar-light bg-light">
-        <img src="assets/images/png-clipart-logo-mind-graphy-illustration-creative-human-brain-photography-people.png">
-        <p class="text-navpattern">Mind Challenge </p>
+        <img src="assets/images/brain.png">
+        <a href="index.html"  class="text-navpattern">Mind Challenge </p>
     </nav>
 </div>
 
@@ -33,18 +33,25 @@
                 Keep in mind that incorrect
                 answers
                 will penalize your score/time by ten seconds!</p>
-                <!-- Buttons -->
-                <button class="buttonquiz" id="startTime">Start Quiz</button>
+            <!-- Buttons -->
+            <button class="buttonquiz" id="startTime">Start Quiz</button>
         </div>
         <!-- Div for quiz content -->
         <div id="newQuestionSpace">
-            <ul id="choices"></ul>
+            <ul id="options"></ul>
+            <!-- <p id = "answers"></p> -->
+            <!-- <ul id="options"></ul>
+            <p id="correctOption"></p> -->
+        </div>
+        <div id="response" >
+            <span></span>
         </div>
 
     </div>
+    <dialog id="myDialog">This is a dialog window</dialog>
 
 
-    <script type="text/javascript" src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
