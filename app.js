@@ -3,11 +3,11 @@ var btnBegin = document.querySelector("#startTime");
 var initialPageEl = document.querySelector("#intialPage")
 var newQuestionSpace = document.querySelector("#newQuestionSpace");
 var wrapper = document.querySelector("#wrapper");
-
+var correctOption = document.querySelector("correctOption")
+var currentChoice = document.querySelector("currentChoice")
 
 var questionIndex = 0;
 var timerCount = 90;
-
 
 
 let score = 0;
@@ -58,6 +58,8 @@ initialPageEl.style.display = "none"
 newQuestionSpace.style.display = "block"
 loadQuestions()
 }
+// var options = document.getElementById("options");
+
 
 function loadQuestions(){
     newQuestionSpace.innerHTML = ""
@@ -65,32 +67,75 @@ function loadQuestions(){
     let currentQuestion = questions[questionIndex]
     
     let questionPara = document.createElement('p')
-    questionPara.innerHTML = currentQuestion.question;
+    if(currentQuestion) {
+        questionPara.innerHTML = currentQuestion.question;
+        let choicesDiv = document.createElement('div')
+        for (let i = 0; i < currentQuestion.options.length; i++) {
+            let paragraph = document.createElement('p')
+            let choiceBtn = document.createElement('button')
+            // let answers = document.createElement('button');
 
-    let choicesDiv = document.createElement('div')
-    for (let i = 0; i < currentQuestion.options.length; i++) {
-        let paragraph = document.createElement('p')
-        let choiceBtn = document.createElement('button')
-        choiceBtn.innerHTML = currentQuestion.options[i];
-        choiceBtn.addEventListener('click',function(event){
-            event.preventDefault()
-            let currentChoice = event.target.innerHTML;
-            if(currentChoice === currentQuestion.result){
-                score = score+10;
-                questionIndex = questionIndex+1;
-                loadQuestions()
-            }else{
-                timerCount =timerCount-5;
-                questionIndex = questionIndex+1;
-                loadQuestions()
-            }
+            choiceBtn.textContent = currentQuestion.options[i];
+            choiceBtn.addEventListener('click',function(event){
+                event.preventDefault()
+                let currentChoice = event.target.innerHTML;
+                if(currentChoice === currentQuestion.result){
+                    // document.getElementById("currentChoice").textContent = "I have changed!";
+                    console.log("Answer is Correct");
+                    const response = document.querySelector("#response");
+                    response.innerHTML = '<div id="response" style="color:greenyellow;font-size:20px;font-weight:bold;margin-left:35%"><span>Correct!</span></div>';
+                    setTimeout(loadQuestions, 500)
 
-        })
-        paragraph.append(choiceBtn)
-        choicesDiv.append(paragraph)
-    }
+                    // paragraph.textContent = "You are correct!";
+                    // console.log(currentChoice.textContent)
+
+                    // print the answer at the bottom
+                    // document.getElementById('correctOption').innerHTML = currentChoice;
+                    // choicesDiv.textContent = 'Correct!';
+                    // choicesDiv.style.color ='green';
+                
+            
+                //If the option is incorrect, displays the result as incorrect with red color.
+               
+                    // document.getElementById("options").innerHTML = result;
+                    // print("Correct!")
+
+                    score = score+10;
+                    questionIndex = questionIndex+1;
+                    // loadQuestions()
+                }else{
+                    // paragraph.textContent = "You are Incorrect!";
+                    // console.log(paragraph.textContent)
+                    console.log("Answer is Incorrect");
+                    const response = document.querySelector("#response");
+                    response.innerHTML = '<div id="response" style="color:maroon;font-size:20px;font-weight:bold;margin-left:35%"><span>Wrong!</span></div>';
+                    // choicesDiv.textContent = 'Incorrect!';
+                    // choicesDiv.style.color ='red';
+
+                    setTimeout(loadQuestions,500)
+                    timerCount =timerCount-5;
+
+                    questionIndex = questionIndex+1;
+
+                    // loadQuestions()
+                }
+
+            })
+            paragraph.append(choiceBtn)
+            choicesDiv.append(paragraph)
+        }
     newQuestionSpace.append(questionPara, choicesDiv)
+    }
+    else {
+        endOfQuiz();
+    }
+    
 }
+
+function endOfQuiz() {
+    
+}
+
 // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
 function startTimer() {
     // Sets timer
@@ -98,11 +143,16 @@ function startTimer() {
       timerCount--;
       timerElement.textContent = "Time Left - "+ timerCount;
       if (timerCount <=0) {
+        
           // Clears interval and stops timer
           clearInterval(timer);
           alert(" **** TIMES UP !! ****")
+
         }
       },1000);
+    //   document.getElementById("myDialog").showModal(); 
+
+      endOfQuiz()
     };
 
 
@@ -149,7 +199,7 @@ btnBegin.addEventListener('click', function(){
 //     }
 //     });
 // };
-// // Creates submit score
+// Creates submit score
 // function submitScore() {
 //   document.setAttribute("hidden","true");
 //   stopTimer();
