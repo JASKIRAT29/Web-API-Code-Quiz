@@ -41,8 +41,8 @@ var questions= [
     },
     {
         question: "How to create an unordered list (a list with the list items in bullets) in HTML?",
-        options: ["<ul>", "<ol>", "<li>", "<i>"],
-        result: "<ul>",
+        options: ["ul", "ol", "li", "i"],
+        result: "ul",
     },
     {
         question: " Which of the following tag is used to define options in a drop-down selection list?",
@@ -117,7 +117,7 @@ function loadQuestions(){
 
                     questionIndex = questionIndex+1;
 
-                    // loadQuestions()
+                    loadQuestions()
                 }
 
             })
@@ -133,7 +133,61 @@ function loadQuestions(){
 }
 
 function endOfQuiz() {
-    
+    // var quizDiv = document.createElement("div");
+    // quizDiv.className = "done-container";
+    // mainEl.appendChild(quizDiv);
+    const quizDiv = document.createElement('div');
+    quizDiv.id = "quizDiv";
+document.body.append(quizDiv);
+const paragraph = document.createElement('p')
+paragraph.textContent ="All Done!!";
+quizDiv.append(paragraph.textContent)
+
+var score = document.createElement("h4");
+score.id = "score";
+
+score.textContent = "Your final score is " ;
+quizDiv.append(score); 
+
+    //div
+var inputContainer = document.createElement("div");
+inputContainer.id = "input-container";
+quizDiv.append(inputContainer);
+
+var label = document.createElement("label");
+label.textContent = "Enter Initials:";
+label.id = "label";
+label.setAttribute("for", "input");
+inputContainer.appendChild(label);
+
+
+//input field
+var inputField = document.createElement("INPUT");
+inputField.id = "enter-input";
+inputField.setAttribute("id", "input")
+
+inputField.setAttribute("type", "text");
+// x.setAttribute("value", "Hello World!");
+inputContainer.appendChild(inputField);
+
+//submit button
+var submit = document.createElement("button");
+submit.textContent = "Submit";
+submit.id = "button";
+submit.addEventListener("click", event => {
+    // retreives user input
+
+    //Work in progress on this section
+// var initals = document.getElementById("input").value;
+// //store score in local storage
+// localStorage.setItem("initals", initals);
+// //store initals in local storage
+// localStorage.setItem("score", totalPoints);
+    // remove page content
+quizDiv.remove();});
+inputContainer.appendChild(submit);
+
+
 }
 
 // The setTimer function starts and stops the timer and triggers winGame() and loseGame()
@@ -141,19 +195,37 @@ function startTimer() {
     // Sets timer
    var timer = setInterval(function() {
       timerCount--;
-      timerElement.textContent = "Time Left - "+ timerCount;
+    //   timerElement.textContent = "Time Left - "+ timerCount;
+      timerElement.textContent = "Time left: " + timerCount + " s";
+
       if (timerCount <=0) {
         
           // Clears interval and stops timer
           clearInterval(timer);
-          alert(" **** TIMES UP !! ****")
+          allDone();
+          timerElement.textContent = "Time's up!";
+        //   alert(" **** TIMES UP !! ****")
 
         }
       },1000);
     //   document.getElementById("myDialog").showModal(); 
-
-      endOfQuiz()
+loadQuestions();
+    //   endOfQuiz()
     };
+
+
+
+    function allDone() {
+
+        newQuestionSpace.style.display = "none";
+        scoreBoard.style.display = "block";
+        console.log(scoreBoard);
+        // show final score
+        finalScore.textContent = "Your final score is :" + totalScore ;
+        // clearInterval(timerInterval);  
+        timeLeft.style.display = "none"; 
+};
+
 
 
 
