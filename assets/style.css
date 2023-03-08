@@ -52,6 +52,26 @@ img {
   transition-timing-function: linear;
   margin-top: 0.6em;
 }
+#quizDiv{
+  /* display: grid; */
+  grid-template-columns: .35fr 1fr .35fr;
+  grid-template-rows: repeat(3, 1fr);
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  width: 500px;
+  height: 500px;
+  background:linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgba(237, 245, 249, 1) 63%);
+  color:black;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display:block;
+  align-items:center;
+text-align: center;
+padding-top: 4%;
+}
+/*  */
 button {
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
   border-radius: 8px;
@@ -70,7 +90,36 @@ display:inline-block;
   transition-timing-function: linear;
   /* margin-top: 0.6em; */
 }
-
+#enter-input{
+  position: relative;
+  top: 5px;
+  grid-column: 2 / 3;
+  max-height: 35px;
+  
+}
+#score {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  /* margin: 5px 0 0 85px; */
+  font-size: 20px;
+  font-weight: 400;
+}
+#label {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  text-align: center;
+  position: relative;
+  top: 11px;
+  font-size: 20px;
+  margin-left: 15px;
+}
+#input-container {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
 #Submit {
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
   border-radius: 8px;
@@ -95,8 +144,9 @@ label {
 
 input {
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
   height: 40px;
+  border-radius: 9px;
   border: 1px solid lightgray;
 }
 
