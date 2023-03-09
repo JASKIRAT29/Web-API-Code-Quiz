@@ -35,23 +35,27 @@ img {
 }
 
 
-
 #goBack {
+  grid-column: 1 / 2;
+  max-width: 100px;
+  color: white;
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
-  border-radius: 8px;
-  margin-left: 25%;
-  color: aliceblue;
-  cursor: pointer;
-  /* font-size: 2em; */
-  letter-spacing: 0.21px;
-  line-height: 16px;
-  max-width: 170px;
-  padding: 20px 52px;
-  text-align: center;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  margin-top: 0.6em;
+  border: 2px solid rgb(100, 100, 216);
+  border-radius: 5px;
+  padding: 5px 10px; 
+  margin-right: 4px;
 }
+
+#clear {
+  grid-column: 2 / 3;
+  max-width: 100px;
+  color: white;
+  background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
+  border: 2px solid rgb(102, 117, 183);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
 #quizDiv{
   /* display: grid; */
   grid-template-columns: .35fr 1fr .35fr;
@@ -72,24 +76,21 @@ text-align: center;
 padding-top: 4%;
 }
 /*  */
-button {
+/* button {
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
   border-radius: 8px;
   color: aliceblue;
   cursor: pointer;
   letter-spacing: 0.21px;
 display:inline-block;
-  /* margin-right: 15px; */
   gap: 10px;
   width: 80%;
   height: 3rem;
-  /* padding: 5px 20px; */
   text-align: center;
   transition-duration: 0.15s;
   transition-property: background-color;
   transition-timing-function: linear;
-  /* margin-top: 0.6em; */
-}
+} */
 #enter-input{
   position: relative;
   top: 5px;
@@ -97,7 +98,7 @@ display:inline-block;
   max-height: 35px;
   
 }
-#score {
+#scoreInput {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   /* margin: 5px 0 0 85px; */
@@ -124,18 +125,13 @@ display:inline-block;
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
   border-radius: 8px;
   color: aliceblue;
-  margin-left: 30%;
   cursor: pointer;
-  /* font-size: 2em; */
   letter-spacing: 0.21px;
-  line-height: 16px;
-  max-width: 170px;
-  padding: 19px 50px;
+display:inline-block;
+  gap: 10px;
+  width: 80%;
+  height: 3rem;
   text-align: center;
-  transition-duration: 0.15s;
-  transition-property: background-color;
-  transition-timing-function: linear;
-  margin-top: 0.6em;
 }
 
 label {
@@ -194,10 +190,19 @@ body {
   margin-top: 20px;
 }
 
-.win-loss-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+#submit-button{
+  background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
+  border-radius: 8px;
+  color: aliceblue;
+  margin-left: 10px;
+  cursor: pointer;
+  /* font-size: 2em; */
+  letter-spacing: 0.21px;
+  /* line-height: 16px; */
+  width: 50%;
+  height:40px;
+  padding: 2px 8px;
+  text-align: center;
 }
 
 .buttonquiz {
@@ -218,7 +223,7 @@ body {
   margin-top: 0.6em;
 }
 
-.button1 {
+#button1 {
   background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
   border-radius: 8px;
   color: aliceblue;
@@ -226,8 +231,8 @@ body {
   cursor: pointer;
   /* font-size: 2em; */
   letter-spacing: 0.21px;
-  line-height: 16px;
-  max-width: 170px;
+  width: 80%;
+  height: 3rem;
   padding: 19px 50px;
   text-align: center;
   transition-duration: 0.15s;
@@ -258,34 +263,13 @@ section {
   border-radius: 8px;
 }
 
-.word-guess {
-  width: 55vw;
-  height: 400px;
-}
-
-.results {
-  width: 30vw;
-  height: 400px;
-}
-
-.card {
-  background: radial-gradient(circle, rgba(240, 230, 140, 1) 0%, rgba(187, 124, 33, 0.604079131652661) 100%);
-  border: 1px solid #eceff1;
-  border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-    rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-  margin: auto;
-  padding: 20px;
-}
-
-.word-blanks {
-  line-height: 360px;
-}
-
-.large-font {
-  font-size: 3.5em;
-  text-align: center;
-}
+#highscore-board {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: rgb(105, 108, 202);
+  max-height: 40px;
+  padding: 7px;
+  font-size: 20px;}
 
 .text-navpattern {
   font-size: 24px;
@@ -359,21 +343,5 @@ section {
   #currentStart {
     float: center;
   }
-
-  #clear {
-    background: linear-gradient(0deg, rgba(19, 41, 61, 1) 0%, rgb(16, 68, 94) 63%);
-    border-radius: 8px;
-    margin-left: 25%;
-    color: aliceblue;
-    cursor: pointer;
-    /* font-size: 2em; */
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 170px;
-    padding: 20px 52px;
-    text-align: center;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    margin-top: 0.6em;
-  }
+ 
 }
