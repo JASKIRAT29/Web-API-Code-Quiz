@@ -203,7 +203,7 @@ var initials = localStorage.getItem("initials");
 var score = localStorage.getItem("score");
 
 var highScoreBoard = document.createElement('p');
-highScoreBoard.textContent=initials + - + score;
+highScoreBoard.textContent=  initials + " - " + score;
 // highScoreBoard.textContent=score;
 
 highScoreBoard.id ="highscore-board";
