@@ -10,9 +10,11 @@ This user friendly application has the feature of multiple choice questions with
 
 We had build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface.
 
-## Screenshots
-![webapi1](https://user-images.githubusercontent.com/114631240/221445992-89ca331c-7ee9-41c4-9db6-7bd63534eb8e.png)
-![webapi2](https://user-images.githubusercontent.com/114631240/221446001-9d68be23-ceaa-40c3-b7dc-9b0b7a12691f.png)
+## Screenshots!
+![webapi1](https://user-images.githubusercontent.com/114631240/224344329-9c561edf-57be-407a-b771-677936a4f128.jpg)
+![Screenshot 2023-03-10 094119](https://user-images.githubusercontent.com/114631240/224344659-9fc318dc-a5b9-43e4-8112-abf8fe63139e.jpg)
+![Code Quiz](https://user-images.githubusercontent.com/114631240/224346417-05345d35-0d51-45cc-9bc9-83378674dc79.gif)
+
 
 ## License
 #### This Project has been licensed by MIT.
