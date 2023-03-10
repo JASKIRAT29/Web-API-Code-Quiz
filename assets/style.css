@@ -2,6 +2,7 @@
   position: absolute;
   left: 30%;
   top: 20%;
+  color:#13293d;
   width: 500px;
   height: 500px;
   border: none;
@@ -17,7 +18,13 @@
   font-size: 20px;
   color: white;
 }
-
+#scoreLink {
+  background-color: purple;
+  margin-left: auto;
+  padding: 15px 32px;
+  font-size: 20px;
+  color: white;
+}
 img {
   width: 30px;
   height: 30px;
@@ -240,7 +247,9 @@ body {
   transition-timing-function: linear;
   margin-top: 0.6em;
 }
-
+#button1:hover{
+  background:steelblue;
+}
 header {
   padding: 40px;
   text-align: center;
