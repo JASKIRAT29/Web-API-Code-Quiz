@@ -182,10 +182,15 @@ inputContainer.appendChild(submit);
 
 
 }
+// function scoreLinkCard(){
+//     // newQuestionSpace.style.display="none";
+//     // timerElement.style.display = "none"; 
+//     // quizDiv.style.display ;
+//     highScore();
+// }
 function highScore(){
     newQuestionSpace.style.display="none";
     timerElement.style.display = "none"; 
-
   
     // Score div
 
@@ -266,13 +271,36 @@ function startTimer() {
       },1000);
 
     };
+    // scoreLink.addEventListener('click', function(){
+    //     // highScoreBoard.style.display = "block";
+    //     // // initialPageEl.style.display = "none";
+    //     // btnBegin.style.display = "none";
+    //     highScore()
+    //     // document.getElementById("scoreLink").addEventListener("click", highScore());
+    // })
+    // document.getElementById("scoreLink").addEventListener('click', function(){
+    //     initialPageEl.style.display = "none";
+    //             newQuestionSpace.style.display="none";
+    //     timerElement.style.display = "none"; 
+    //     highScore()
+
+    // });
+    // quizDiv.appendChild(scoreLink);
+
+            // document.getElementById("scoreLink").addEventListener("click", highScore());
+//    scoreLink.addEventListener("click", highScore());
 
 
+
+    // function scoreCard(){
+
+    // }
 // Event Listeners/Begin
 btnBegin.addEventListener('click', function(){
     startTimer()
     startQuiz()
 });
+
 
 
 
